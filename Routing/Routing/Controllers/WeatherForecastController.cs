@@ -23,6 +23,12 @@ namespace Routing.Controllers
             _logger = logger;
         }
 
+        [HttpGet("{name}")]
+        public string Get(string name)
+        {
+            return $"Hello From Controller {name}";
+        }
+
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
